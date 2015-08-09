@@ -15,11 +15,11 @@ ActiveRecord::Schema.define(version: 20150809084036) do
 
   create_table "ankles", force: :cascade do |t|
     t.string   "image"
-    t.integer  "score"
+    t.integer  "score",      default: 1500
     t.integer  "user_id"
-    t.boolean  "is_avatar"
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
+    t.boolean  "is_avatar",  default: true
+    t.datetime "created_at",                null: false
+    t.datetime "updated_at",                null: false
   end
 
   create_table "users", force: :cascade do |t|

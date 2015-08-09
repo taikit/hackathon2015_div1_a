@@ -25,7 +25,7 @@ class AnklesController < ApplicationController
   # POST /ankles.json
   def create
     @ankle = Ankle.new(ankle_params)
-
+    @ankle.is_avatar = false
     respond_to do |format|
       if @ankle.save
         format.html { redirect_to @ankle, notice: 'Ankle was successfully created.' }
