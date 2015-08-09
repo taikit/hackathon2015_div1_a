@@ -71,8 +71,6 @@ p {
   font-size: 1.7em;
   color: white;
   text-transform: uppercase;
-  letter-spacing: -1px;
-  padding-top: 9px;
   font-weight: bold;
   line-height: 1;
   &:hover {
@@ -196,7 +194,8 @@ input {
 }
 
 #error_explanation {
-  color: #f00;
+  color: green;
+  text-align: center;
   ul {
     list-style: none;
     margin: 0 0 18px 0;
@@ -255,4 +254,18 @@ aside {
 img {
   width: 300px;
   height: 200px;
+}
+
+.notice {
+  text-align: center;
+  color: green;
+}
+
+.BattleImg {
+  // width: devece-width;
+  height: auto;
+}
+
+.footerlink {
+  font-size: 16px;
 }

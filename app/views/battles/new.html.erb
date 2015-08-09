@@ -14,8 +14,8 @@
     <% end %>
     <%= hidden_field_tag :ankle_a_id, @ankle_a.id %>
     <%= hidden_field_tag :ankle_b_id, @ankle_b.id %>
-    <%= f.submit :type => :image, :src => @ankle_a.image_url, :name => 'a' %>
-    <%= f.submit :type => :image, :src => @ankle_b.image_url, :name => 'b' %>
+    <%= f.submit :type => :image, :src => @ankle_a.image_url, :name => 'a', id: "battle1" %>
+    <%= f.submit :type => :image, :src => @ankle_b.image_url, :name => 'b', id: "battle2"%>
 <% end %>
 
-<%= link_to 'Back', battles_path %>
+<%= link_to 'Back', battles_path, class: "footerlink" %>
