@@ -13,14 +13,7 @@
 
 <<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150809083436) do
-=======
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150809084036) do
-=======
 ActiveRecord::Schema.define(version: 20150809083436) do
->>>>>>> 8baef8452addea71ab85b12af39b7117ce08c4fa
->>>>>>> d0b3e0b8831ebd83a69c14301a022bdcbfb8d349
-
   create_table "ankles", force: :cascade do |t|
     t.string   "image"
     t.datetime "created_at", null: false
