@@ -11,9 +11,8 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-<<<<<<< HEAD
-ActiveRecord::Schema.define(version: 20150809083436) do
-ActiveRecord::Schema.define(version: 20150809083436) do
+ActiveRecord::Schema.define(version: 20150809084036) do
+
   create_table "ankles", force: :cascade do |t|
     t.string   "image"
     t.datetime "created_at", null: false
