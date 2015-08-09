@@ -1,4 +1,4 @@
-<h1>New Battle</h1>
+<h1>Which one do you like?</h1>
 
 <%= form_for(@battle) do |f| %>
     <% if @battle.errors.any? %>
@@ -14,8 +14,8 @@
     <% end %>
     <%= hidden_field_tag :ankle_a_id, @ankle_a.id %>
     <%= hidden_field_tag :ankle_b_id, @ankle_b.id %>
-    <%= f.submit :type => :image, :src => @ankle_a.image_url, :name => 'a', id: "battle1" %>
-    <%= f.submit :type => :image, :src => @ankle_b.image_url, :name => 'b', id: "battle2"%>
+    <%= f.submit :type => :image, :src => @ankle_a.image_url, :name => 'a', class: "col-xs-6" %>
+    <%= f.submit :type => :image, :src => @ankle_b.image_url, :name => 'b', class: "col-xs-6" %>
 <% end %>
-
+<br>
 <%= link_to 'Back', battles_path, class: "footerlink" %>
