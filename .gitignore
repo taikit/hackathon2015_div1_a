@@ -19,7 +19,7 @@
 /basic
 /Vagrantfile
 *.swp
-/.vagrant
+/.vagrant/
 /package.box
 /ruby.box
 
