@@ -1,4 +1,7 @@
-<p>
+<p id="notice"><%= notice %></p>
+
+
+<p>  
 <%= @ankle.id %>
 </p>
 
@@ -16,6 +19,7 @@
 
 
 <% @ankle.comments.each do |comment| %>
+<%= comment.user %>
 <%= comment.body %><br>
 <% end %>
 <% else %>
@@ -23,4 +27,5 @@
 <% end %>
 
 <br>
+
 <%= link_to 'Back', ankles_path %>
