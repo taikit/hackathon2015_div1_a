@@ -48,7 +48,7 @@ class BattlesController < ApplicationController
     @battle.user = current_user
     respond_to do |format|
       if @battle.save_with_cal
-        format.html { redirect_to @battle, notice: 'Battle was successfully created.' }
+        format.html { redirect_to new_battle_path, notice: 'Battle was successfully created.' }
         format.json { render :show, status: :created, location: @battle }
       else
         format.html { render :new }

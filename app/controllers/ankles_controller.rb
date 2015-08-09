@@ -5,7 +5,7 @@ class AnklesController < ApplicationController
   # GET /ankles
   # GET /ankles.json
   def index
-    @ankles = Ankle.all
+    @ankles = Ankle.all.order(:score).reverse_order
   end
 
   # GET /ankles/1
