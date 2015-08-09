@@ -22,3 +22,5 @@
 /.vagrant
 /package.box
 /ruby.box
+
+*.orig
