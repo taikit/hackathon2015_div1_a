@@ -18,3 +18,5 @@
 
 /basic
 /Vagrantfile
+/*.swp
+/.vagrant
