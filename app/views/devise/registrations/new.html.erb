@@ -24,11 +24,12 @@
       <% resource.ankles.build %>
       <%= f.fields_for :ankles do |ankle| %>
           <%= ankle.label :image %>
-          <%= ankle.file_field :image %>
+          <div id='preview_field'></div>
+          <%= ankle.file_field :image, onchange:"preview(this)" %>
       <% end %>
     </div>
     <div class="actions">
-      <%= f.submit "Sign up" %>
+      <%= f.submit "Sign up", class: "btn btn-larg btn-primary" %>
     </div>
 <% end %>
 
