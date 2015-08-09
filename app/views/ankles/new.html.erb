@@ -1,13 +1,10 @@
 <%= form_for(@ankle) do |f| %>
 
-　　<%= f.label :id %>
-　　<%= f.text_field :id %>
+    <%= f.label :image %>
+    <div id='preview_field'></div>
+    <%= f.file_field :image, onchange:"preview(this)" %>
 
-　　<%= f.label :image %>
-　　<%= f.file_field :image %> （画像用に追加したカラムの名前）
-
-    <br><%= f.submit %>
+    <%= f.submit class: "btn btn-large btn-primary"%>
 <% end %>
-
 
 <%= link_to 'Back', ankles_path %>
