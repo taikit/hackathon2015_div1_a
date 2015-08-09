@@ -13,6 +13,7 @@
 
 
 ActiveRecord::Schema.define(version: 20150809155257) do
+
   create_table "ankles", force: :cascade do |t|
     t.string   "image"
     t.integer  "score",      default: 1500
