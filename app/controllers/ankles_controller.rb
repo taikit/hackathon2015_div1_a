@@ -1,6 +1,6 @@
 class AnklesController < ApplicationController
   before_action :set_ankle, only: [:show, :edit, :update, :destroy]
-  before_action :authenticate_user!, :only => [:create]  
+  before_action :authenticate_user!, :only => [:create]
 
   # GET /ankles
   # GET /ankles.json
@@ -12,6 +12,7 @@ class AnklesController < ApplicationController
   # GET /ankles/1.json
   def show
       @comment = @ankle.comments.build
+      @ankle_list = Ankle.find(params[:id])
   end
 
   # GET /ankles/new
