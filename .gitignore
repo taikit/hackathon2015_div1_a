@@ -19,7 +19,8 @@
 /basic
 /Vagrantfile
 *.swp
-/.vagrant/
+/.vagrant/*
+/.idea/*
 /package.box
 /ruby.box
 
