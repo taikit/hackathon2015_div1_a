@@ -26,4 +26,4 @@
 
 *.orig
 .DS_Store
-/public/uploads/tmp/*
+/public/uploads/*
