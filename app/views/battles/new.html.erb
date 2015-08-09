@@ -1,4 +1,4 @@
-<h1>Which one do you like?</h1>
+<h1 id='question'>Which one do you like?</h1>
 
 <%= form_for(@battle) do |f| %>
     <% if @battle.errors.any? %>
@@ -17,5 +17,4 @@
     <%= f.submit :type => :image, :src => @ankle_a.image_url, :name => 'a', class: "col-xs-6" %>
     <%= f.submit :type => :image, :src => @ankle_b.image_url, :name => 'b', class: "col-xs-6" %>
 <% end %>
-<br>
 <%= link_to 'Back', battles_path, class: "footerlink" %>
