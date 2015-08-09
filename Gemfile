@@ -35,7 +35,7 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # gem 'capistrano-rails', group: :development
 
 # carrierwave
-gem 'carrierwave'  
+gem 'carrierwave'
 gem 'rmagick'
 
 group :development, :test do

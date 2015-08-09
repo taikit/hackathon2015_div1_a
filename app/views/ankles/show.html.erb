@@ -1,9 +1,11 @@
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Image:</strong>
-  <%= @ankle.image %>
-</p>
 
-<%= link_to 'Edit', edit_ankle_path(@ankle) %> |
+<% if @ankle.image? %>
+<%= image_tag @ankle.image.thumb.url %>
+<% else %>
+　　<%= image_tag 'noimage.gif' %> <br>
+<% end %>
+
+<br>
+
 <%= link_to 'Back', ankles_path %>
