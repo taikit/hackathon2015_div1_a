@@ -13,8 +13,8 @@
       <tr>
         <td><%= link_to image_tag(ankle.image.thumb.url), ankle %></td>
         <td>Score:<%= ankle.score %>
-        <br><%= 'Win:' %>
-        <br><%= 'Lose:' %>
+        <br>Win:<%= ankle.win_battles.count %>
+        <br>Lose:<%= ankle.lose_battles.count %>
         <br><%= link_to 'Destroy', ankle, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>
     <% end %>
