@@ -20,3 +20,5 @@
 /Vagrantfile
 /*.swp
 /.vagrant
+/package.box
+/ruby.box
