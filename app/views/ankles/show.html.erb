@@ -1,7 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 
-<p>  
+<p>
 <%= @ankle.id %>
 </p>
 
@@ -18,8 +18,8 @@
 <% end %>
 
 
-<% @ankle.comments.each do |comment| %>
-<%= comment.user %>
+<% @ankle_list.comments.each do |comment| %>
+<%= image_tag comment.user.ankles.where(:is_avatar => true).first.image.thumb.url %>
 <%= comment.body %><br>
 <% end %>
 <% else %>
