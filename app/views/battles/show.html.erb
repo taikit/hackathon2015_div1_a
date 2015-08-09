@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Win ankle:</strong>
+  <%= @battle.win_ankle_id %>
+</p>
+
+<p>
+  <strong>Lose ankle:</strong>
+  <%= @battle.lose_ankle_id %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @battle.user_id %>
+</p>
+
+<%= link_to 'Edit', edit_battle_path(@battle) %> |
+<%= link_to 'Back', battles_path %>
