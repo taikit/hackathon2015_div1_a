@@ -15,9 +15,8 @@
 <% end %>
 
 
-<% @ankle.comments.each do |x| %>
-<%= x.user.ankles. %>
-<%= x.body %><br>
+<% @ankle.comments.each do |comment| %>
+<%= comment.body %><br>
 <% end %>
 <% else %>
 　　<%= image_tag 'noimage.gif' %> <br>
@@ -25,4 +24,3 @@
 
 <br>
 <%= link_to 'Back', ankles_path %>
-
