@@ -1,15 +1,16 @@
 Rails.application.routes.draw do
   resources :comments
-  resources :comments
-  resources :comments
-  resources :comments
-  devise_for :users
+  devise_for :users, :controllers => {
+                       :sessions => 'users/sessions',
+                       :registrations => 'users/registrations'
+                   }
+
   resources :ankles
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
   # You can have the root of your site routed with "root"
- root 'ankle#index'
+  root 'ankles#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'

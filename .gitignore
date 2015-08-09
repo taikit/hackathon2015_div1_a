@@ -19,9 +19,11 @@
 /basic
 /Vagrantfile
 *.swp
-/.vagrant/
+/.vagrant/*
+/.idea/*
 /package.box
 /ruby.box
 
 *.orig
 .DS_Store
+/public/uploads/tmp/*

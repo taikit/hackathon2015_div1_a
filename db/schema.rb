@@ -11,10 +11,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20150809151856) do
+=======
+ActiveRecord::Schema.define(version: 20150809084036) do
+>>>>>>> 034f39765ca19da0ee7f482c2e594a69289d9b21
 
   create_table "ankles", force: :cascade do |t|
     t.string   "image"
+    t.integer  "score"
+    t.integer  "user_id"
+    t.boolean  "is_avatar"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
   end
@@ -40,7 +47,6 @@ ActiveRecord::Schema.define(version: 20150809151856) do
     t.string   "last_sign_in_ip"
     t.datetime "created_at",                          null: false
     t.datetime "updated_at",                          null: false
-    t.integer  "ankle_id"
   end
 
   add_index "users", ["email"], name: "index_users_on_email", unique: true
