@@ -1,5 +1,25 @@
+<p>  
+<%= @ankle.id %>
+</p>
+
+
 <% if @ankle.image? %>
 <%= image_tag @ankle.image.thumb.url %>
+
+<%= form_for(@comment) do |f| %>
+
+<%= f.hidden_field :ankle_id, :value => @comment.ankle_id %>
+<%= f.label :body %>
+<%= f.text_field :body %>
+<%= f.submit %>
+<% end %>
+
+
+<% @ankle.comments.each do |x| %>
+<%= x.user.ankles. %>
+<%= x.body %><br>
+<% end %>
 <% else %>
 　　<%= image_tag 'noimage.gif' %>
 <% end %>
+

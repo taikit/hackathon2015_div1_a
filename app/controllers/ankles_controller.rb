@@ -1,5 +1,6 @@
 class AnklesController < ApplicationController
   before_action :set_ankle, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate_user!, :only => [:create]  
 
   # GET /ankles
   # GET /ankles.json
@@ -10,6 +11,7 @@ class AnklesController < ApplicationController
   # GET /ankles/1
   # GET /ankles/1.json
   def show
+      @comment = @ankle.comments.build
   end
 
   # GET /ankles/new
@@ -25,6 +27,7 @@ class AnklesController < ApplicationController
   # POST /ankles.json
   def create
     @ankle = Ankle.new(ankle_params)
+    @ankle.user_id = current_user
 
     respond_to do |format|
       if @ankle.save
@@ -64,7 +67,7 @@ class AnklesController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_ankle
-      @ankle = Ankle.find(params[:id])
+    	@ankle = Ankle.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
