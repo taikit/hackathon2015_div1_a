@@ -1,5 +1,21 @@
 <h1>New Battle</h1>
 
-<%= render 'form' %>
+<%= form_for(@battle) do |f| %>
+    <% if @battle.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@battle.errors.count, "error") %> prohibited this battle from being saved:</h2>
+
+          <ul>
+            <% @battle.errors.full_messages.each do |message| %>
+                <li><%= message %></li>
+            <% end %>
+          </ul>
+        </div>
+    <% end %>
+    <%= hidden_field_tag :ankle_a_id, @ankle_a.id %>
+    <%= hidden_field_tag :ankle_b_id, @ankle_b.id %>
+    <%= f.submit :type => :image, :src => @ankle_a.image_url, :name => 'a' %>
+    <%= f.submit :type => :image, :src => @ankle_b.image_url, :name => 'b' %>
+<% end %>
 
 <%= link_to 'Back', battles_path %>
