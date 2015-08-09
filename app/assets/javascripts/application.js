@@ -20,13 +20,17 @@ function preview(ele) {
     if (!ele.files.length) return;  // ファイル未選択
 
     var file = ele.files[0];
+    var preview_field = document.getElementById('preview_field');
+    var preimg = $('#preview_field').find('img');
     if (!/^image\/(png|jpeg|gif)$/.test(file.type)) return;  // typeプロパティでMIMEタイプを参照
+
+    $(preimg).remove();
 
     var img = document.createElement('img');
     var fr = new FileReader();
     fr.onload = function() {
         img.src = fr.result;  // 読み込んだ画像データをsrcにセット
-        document.getElementById('preview_field').appendChild(img);
+        preview_field.appendChild(img);
     }
     fr.readAsDataURL(file);  // 画像読み込み
 }
