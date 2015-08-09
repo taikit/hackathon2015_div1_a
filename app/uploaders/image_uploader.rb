@@ -1,6 +1,9 @@
 # encoding: utf-8
 
 class ImageUploader < CarrierWave::Uploader::Base
+  if Rails.env == 'production'
+    storage :fog
+  end
   # リサイズしたり画像形式を変更するのに必要
   include CarrierWave::RMagick
 
@@ -22,6 +25,6 @@ class ImageUploader < CarrierWave::Uploader::Base
 
   # 拡張子が同じでないとGIFをJPGとかにコンバートできないので、ファイル名を変更
   def filename
-    super.chomp('#{secure_token}.jpg')if original_filename.present?
+    super.chomp('#{secure_token}.jpg') if original_filename.present?
   end
 end
