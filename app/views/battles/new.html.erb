@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+<h1 id='question'>Which one do you like?</h1>
+=======
 <h1>Which one do you like?</h1>
+>>>>>>> 4c850fe6ef63c2c418cc851083b07e8a736f1954
 
 <%= form_for(@battle) do |f| %>
     <% if @battle.errors.any? %>
@@ -17,5 +21,8 @@
     <%= f.submit :type => :image, :src => @ankle_a.image_url, :name => 'a', class: "col-xs-6" %>
     <%= f.submit :type => :image, :src => @ankle_b.image_url, :name => 'b', class: "col-xs-6" %>
 <% end %>
+<<<<<<< HEAD
+=======
 <br>
+>>>>>>> 4c850fe6ef63c2c418cc851083b07e8a736f1954
 <%= link_to 'Back', battles_path, class: "footerlink" %>
