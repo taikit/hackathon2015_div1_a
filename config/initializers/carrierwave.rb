@@ -15,7 +15,7 @@ if Rails.env == 'production'
 
     config.aws_credentials = {
         access_key_id: ENV['AC_ID'],
-        secret_access_key: ENV['AC_PATH'],
+        secret_access_key: ENV['AC_PASS'],
         region: 'ap-northeast-1'
     }
 
