@@ -23,9 +23,9 @@
     <div class="field">
       <% resource.ankles.build %>
       <%= f.fields_for :ankles do |ankle| %>
-          <%= ankle.label :image %>
+          <%= ankle.label :image, 'Your ankle image' %>
           <div id='preview_field'></div>
-          <%= ankle.file_field :image, onchange:"preview(this)" %>
+          <%= ankle.file_field :image, onchange: "preview(this)" %>
       <% end %>
     </div>
     <div class="actions">
