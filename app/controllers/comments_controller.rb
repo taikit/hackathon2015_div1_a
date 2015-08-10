@@ -33,7 +33,7 @@ class CommentsController < ApplicationController
         format.html { redirect_to ankle_path(@comment.ankle), notice: 'Comment was successfully created.' }
         format.json { render :show, status: :created, location: @comment }
       else
-	format.html { redirect_to ankle_path(@comment.ankle), alert: 'Comment has too long (5words only).' }
+        format.html { redirect_to ankle_path(@comment.ankle), alert: 'Comment has too long (5words only).' }
         format.json { render json: @comment.errors, status: :unprocessable_entity }
       end
     end
