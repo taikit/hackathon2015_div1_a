@@ -12,14 +12,14 @@
 <%= form_for(@comment) do |f| %>
 
 <%= f.hidden_field :ankle_id, :value => @comment.ankle_id %>
-<%= f.label :body %>
+<%= f.label :comment %>
 <%= f.text_field :body %>
-<%= f.submit %>
+<%= f.submit class: "btn btn-large btn-primary"%>
 <% end %>
 
 
 <% @ankle_list.comments.each do |comment| %>
-<%= image_tag comment.user.ankles.where(:is_avatar => true).first.image.thumb.url %>
+<%= image_tag comment.user.ankles.where(:is_avatar => true).first.image.thumb.url, class: "CommentImg" %>
 <%= comment.body %><br>
 <% end %>
 <% else %>
