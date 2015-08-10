@@ -10,7 +10,7 @@
 
 <br>
 <% @ankle_list.comments.each do |comment| %>
-<%= image_tag comment.user.ankles.where(:is_avatar => true).first.image.thumb.url, class: "CommentImg" %>
+<%= image_tag comment.user.ankles.where(:is_avatar => true).first.image, class: "CommentImg" %>
 <%= comment.body %><br>
 <% end %>
 <% else %>
