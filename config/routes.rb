@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :favorites
-  resources :battles
-  resources :comments
+  resources :battles, :only => [:index, :new, :create]
+  resources :comments, :only => [:index, :create]
   devise_for :users, :controllers => {
                        :sessions => 'users/sessions',
                        :registrations => 'users/registrations'

@@ -4,14 +4,14 @@ class BattlesController < ApplicationController
 
   # GET /battles
   # GET /battles.json
-  def index
-    @battles = Battle.all
-  end
+  #def index
+  #  @battles = Battle.all
+  #end
 
   # GET /battles/1
   # GET /battles/1.json
-  def show
-  end
+  #def show
+  #end
 
   # GET /battles/new
   def new
@@ -31,8 +31,8 @@ class BattlesController < ApplicationController
   end
 
   # GET /battles/1/edit
-  def edit
-  end
+  #def edit
+  #end
 
   # POST /battles
   # POST /battles.json
