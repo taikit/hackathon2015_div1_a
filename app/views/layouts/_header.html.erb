@@ -9,11 +9,7 @@
       </button>
 
       <%= link_to "anklebsh", root_path, id: "logo", class: "navbar-brand" %>
-      <% if current_user %>
-          <a class="twitter-share-button" href="https://twitter.com/share" data-dnt="true" data-text="My ankle score is <%= current_user.ankles.where(:is_avatar => true).first.score %>" data-url="<%= user_url(current_user) %>" data-counturl="<%= root_url %>">Tweet</a>
-      <% else %>
-          <a class="twitter-share-button" href="https://twitter.com/share" data-dnt="true" data-text="Let's measure our ankle score on Anklebsh" data-url="<%= root_url %>" data-counturl="<%= root_url %>">Tweet</a>
-      <% end %>
+
       <!-- [head]内や、[body]の終了直前などに配置 -->
       <script>
           window.twttr = (function (d, s, id) {
@@ -36,6 +32,7 @@
       <ul class="nav navbar-nav">
         <li class="active"><%= link_to "Ranking!!!", root_path %></li>
         <li><%= link_to "Battle", new_battle_path %></li>
+        <li><%= link_to "New Ankle", new_ankle_path %></li>
         <li class="divider"></li>
         <% if user_signed_in? %>
             <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
@@ -44,6 +41,12 @@
             <li><%= link_to "Sign up", new_user_registration_path %></li>
         <% end %>
         </li>
+        
+        <% if current_user %>
+            <a class="twitter-share-button" href="https://twitter.com/share" data-dnt="true" data-text="My ankle score is <%= current_user.ankles.where(:is_avatar => true).first.score %>" data-url="<%= user_url(current_user) %>" data-counturl="<%= root_url %>">Tweet</a>
+        <% else %>
+            <a class="twitter-share-button" href="https://twitter.com/share" data-dnt="true" data-text="Let's measure our ankle score on Anklebsh" data-url="<%= root_url %>" data-counturl="<%= root_url %>">Tweet</a>
+        <% end %>
       </ul>
     </div>
   </div>
