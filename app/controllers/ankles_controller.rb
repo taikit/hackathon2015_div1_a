@@ -21,8 +21,8 @@ class AnklesController < ApplicationController
   end
 
   # GET /ankles/1/edit
-  def edit
-  end
+  #def edit
+  #end
 
   # POST /ankles
   # POST /ankles.json
@@ -57,13 +57,13 @@ class AnklesController < ApplicationController
 
   # DELETE /ankles/1
   # DELETE /ankles/1.json
-  def destroy
-    @ankle.destroy
-    respond_to do |format|
-      format.html { redirect_to ankles_url, notice: 'Ankle was successfully destroyed.' }
-      format.json { head :no_content }
-    end
-  end
+  #def destroy
+  #  @ankle.destroy
+  #  respond_to do |format|
+  #    format.html { redirect_to ankles_url, notice: 'Ankle was successfully destroyed.' }
+  #    format.json { head :no_content }
+  #  end
+  #end
 
   private
     # Use callbacks to share common setup or constraints between actions.
