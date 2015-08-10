@@ -18,6 +18,7 @@
 
         <li class="active"><%= link_to "Ranking!!!", root_path %></li>
         <li><%= link_to "Battle", new_battle_path %></li>
+        <li><%= link_to "New Ankle", new_ankle_path %></li>
         <li class="divider"></li>
         <% if user_signed_in? %>
         <li><%= link_to "Sign out", destroy_user_session_path, method: :delete %></li>
