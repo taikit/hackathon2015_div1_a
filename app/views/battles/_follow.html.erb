@@ -1,0 +1,4 @@
+<%= form_for @ankle_a.favorites.build, remote: true, format: :json, html: {class: 'favorite_form col-xs-6'} do |f| %>
+    <%= f.hidden_field :ankle_id, :value => @ankle_a.id %>
+    <%= f.submit 'Fab', class: 'btn btn-large btn-primary' %>
+<% end %>
