@@ -34,3 +34,4 @@ function preview(ele) {
     }
     fr.readAsDataURL(file);  // 画像読み込み
 }
+

@@ -17,6 +17,18 @@
     <%= f.submit :type => :image, :src => @ankle_a.image_url, :name => 'a', class: "col-xs-6" %>
     <%= f.submit :type => :image, :src => @ankle_b.image_url, :name => 'b', class: "col-xs-6" %>
 <% end %>
+<% if current_user.favorites.where(:ankle_id => @ankle_a.id).blank? %>
+    <%= form_for @ankle_a.favorites.build, remote: true, format: :json, html: {class: 'favorite_form'} do |f| %>
+        <%= f.hidden_field :ankle_id, :value => @ankle_a.id %>
+        <%= f.submit 'お気に入り追加' %>
+    <% end %>
+<% end %>
+<% if current_user.favorites.where(:ankle_id => @ankle_b.id).blank? %>
+    <%= form_for @ankle_b.favorites.build, remote: true, format: :json, html: {class: 'favorite_form'} do |f| %>
+        <%= f.hidden_field :ankle_id, :value => @ankle_b.id %>
+        <%= f.submit 'お気に入り追加' %>
+    <% end %>
+<% end %>
 
 <br>
 
