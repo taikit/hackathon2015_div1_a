@@ -18,7 +18,7 @@
     <%= f.submit :type => :image, :src => @ankle_b.image_url, :name => 'b', class: "col-xs-6" %>
 <% end %>
 <% if current_user.favorites.where(:ankle_id => @ankle_a.id).blank? %>
-    <%= form_for @ankle_a.favorites.build, remot e: true, format: :json, html: {class: 'favorite_form'} do |f| %>
+    <%= form_for @ankle_a.favorites.build, remote: true, format: :json, html: {class: 'favorite_form'} do |f| %>
         <%= f.hidden_field :ankle_id, :value => @ankle_a.id %>
         <%= f.submit 'お気に入り追加' %>
     <% end %>
