@@ -1,9 +1,17 @@
 <%= image_tag @user.ankles.where(:is_avatar => true).first.image, class: "" %>
 <h3>Posts</h3>
 <% @user.ankles.each do |ankle| %>
-    <%= image_tag ankle.image_url, class: 'CommentImg' %>
+
+<%= link_to ankle_path do %>
+  <% image_tag ankle.image_url, class: "CommentImg" %>
+<% end %>
+
 <% end %>
 <h3>Favorites</h3>
 <% @user.favorites.each do |favorite| %>
-    <%= image_tag favorite.ankle.image_url, class: 'CommentImg' %>
+
+<%= link_to ankle_path do %>
+  <% image_tag favorite.ankle.image_url, class: "CommentImg" %>
+<% end %>
+
 <% end %>
