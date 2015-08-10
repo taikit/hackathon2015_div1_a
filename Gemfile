@@ -38,7 +38,6 @@ gem 'sdoc', '~> 0.4.0', group: :doc
 # carrierwave
 gem 'carrierwave'
 gem 'rmagick'
-gem 'fog'
 gem 'unf'
 gem 'carrierwave-aws'
 
